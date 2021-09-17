@@ -3,10 +3,18 @@ const Equipos = (Ricks, Mortys) =>{
     const promedio1 = sumatoriaRicks / Ricks.length;
     const sumatoriaMortys = Mortys.reduce(function(a, b){ return a + b;}, 0);
     const promedio2 = sumatoriaMortys / Mortys.length;
-    return[promedio1, promedio2];
+    const resultado = promedio1 > promedio2 ? 
+    `Ganador : Ricks (${promedio1})` : 
+    promedio1 === promedio2 ? 
+    `EMPATE : Ricks (${promedio1}) - Mortys (${promedio2})` : 
+    `Ganador : Mortys (${promedio2})` 
+
+    return resultado;
 };
 
 let main = () =>{
     console.log(Equipos([96, 108, 89], [88, 91, 110]));
+    console.log(Equipos([97, 112, 101], [109, 95, 123]));
+    console.log(Equipos([97, 112, 101], [109, 95, 106]));
 }
 export default main;
