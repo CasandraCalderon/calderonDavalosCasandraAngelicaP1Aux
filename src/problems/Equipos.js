@@ -3,11 +3,14 @@ const Equipos = (Ricks, Mortys) =>{
     const promedio1 = sumatoriaRicks / Ricks.length;
     const sumatoriaMortys = Mortys.reduce(function(a, b){ return a + b;}, 0);
     const promedio2 = sumatoriaMortys / Mortys.length;
-    const resultado = promedio1 > promedio2 ? 
+    const resultado = promedio1 > 100 || promedio2 > 100? 
+    promedio1 > promedio2 ? 
     `Ganador : Ricks (${promedio1})` : 
     promedio1 === promedio2 ? 
     `EMPATE : Ricks (${promedio1}) - Mortys (${promedio2})` : 
-    `Ganador : Mortys (${promedio2})` 
+    `Ganador : Mortys (${promedio2})` :
+    `Puntuaciones menores a 100`
+
 
     return resultado;
 };
