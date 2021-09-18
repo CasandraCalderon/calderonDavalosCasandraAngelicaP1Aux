@@ -1,2 +1,2 @@
-import main from "./problems/Equipos";
+import main from "./problems/CalcAverage";
 main();
