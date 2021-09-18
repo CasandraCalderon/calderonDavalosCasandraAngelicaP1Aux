@@ -1,4 +1,4 @@
-const tip = 120;
+const tip = 200;
 let propina = (tip > 300) ? 
 (tip * 20 / 100) : 
 (tip >= 50) ? 
