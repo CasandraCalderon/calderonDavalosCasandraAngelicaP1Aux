@@ -1,2 +1,2 @@
-import main from "./problems/CalcAverage";
+import main from "./problems/Propina";
 main();
